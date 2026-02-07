@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>EPP IV Quarter 4 Interactive Game</title>
+<style>
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#fef9f3; }
+.center-screen {
+  display:flex; flex-direction:column; justify-content:center; align-items:center;
+  height:100vh; text-align:center;
+}
+h1 { font-size:50px; color:#ff8c00; margin-bottom:30px; }
+button.play-now {
+  background-color:#ff8c00; color:white; font-size:28px; padding:18px 50px;
+  border:none; border-radius:10px; cursor:pointer;
+}
+button { margin:5px 5px 15px 0; padding:12px 25px; font-size:20px; cursor:pointer; }
+.week-content { padding:20px; max-width:900px; margin:auto; }
+h2 { color:#ff8c00; font-size:28px; margin-top:40px; }
+h3 { font-size:22px; }
+p.story { text-align:justify; font-size:20px; line-height:1.6; background-color:#fff4e6; padding:15px; border-radius:8px; }
+.feedback { font-weight:bold; margin-bottom:20px; font-size:20px; }
+.score { font-weight:bold; font-size:22px; margin:20px 0; }
+.week { display:none; }
+</style>
+</head>
+<body>
+
+<!-- START SCREEN -->
+<div id="startScreen" class="center-screen">
+  <h1>EPP IV - Quarter 4</h1>
+  <button class="play-now" onclick="startGame()">Simulan ang Laro</button>
+</div>
+
+<div id="gameContent" class="week-content" style="display:none;">
+
+  <!-- WEEK 1: Planting Procedures -->
+  <div class="week" id="week1">
+    <h2>Week 1: Pagtatanim ni Maria</h2>
+    <p class="story">
+      Si Maria ay isang masigasig na hardinera sa kanilang barangay. Nagtanim siya ng sibuyas, kamatis, at sitaw sa kanyang bakuran. Sinunod niya ang tamang hakbang: paghahanda ng lupa, pagpili ng binhi, pagtatanim, pagdidilig, at pag-aalaga sa mga halaman. Matapos ang ilang linggo, nagbunga ang kanyang pananim at naibahagi niya sa pamilya at kapitbahay.
+    </p>
+
+    <h3>1. Ano ang unang hakbang ni Maria sa pagtatanim?</h3>
+    <button onclick="checkAnswerEPP(1,'A')">a) Pagtatanim ng mga binhi</button>
+    <button onclick="checkAnswerEPP(1,'B')">b) Paghahanda ng lupa</button>
+    <button onclick="checkAnswerEPP(1,'C')">c) Pagdidilig ng tubig</button>
+    <button onclick="checkAnswerEPP(1,'D')">d) Pagpipitas ng bunga</button>
+    <p class="feedback" id="feedbackEPP1"></p>
+
+    <h3>2. Ano ang ginamit ni Maria upang burahin ang mga damo at bato?</h3>
+    <button onclick="checkAnswerEPP(2,'A')">a) Pala</button>
+    <button onclick="checkAnswerEPP(2,'B')">b) Kalabaw</button>
+    <button onclick="checkAnswerEPP(2,'C')">c) Asarol</button>
+    <button onclick="checkAnswerEPP(2,'D')">d) Piko</button>
+    <p class="feedback" id="feedbackEPP2"></p>
+
+    <h3>3. Paano niya pinili ang kanyang mga binhi?</h3>
+    <button onclick="checkAnswerEPP(3,'A')">a) Mula sa mga kaibigan</button>
+    <button onclick="checkAnswerEPP(3,'B')">b) Mula sa lokal na tindahan</button>
+    <button onclick="checkAnswerEPP(3,'C')">c) Mula sa kanyang sariling lupa</button>
+    <button onclick="checkAnswerEPP(3,'D')">d) Mula sa kanyang guro</button>
+    <p class="feedback" id="feedbackEPP3"></p>
+
+    <h3>4. Ano ang ginagawa ni Maria upang mapanatiling mamasa-masa ang lupa?</h3>
+    <button onclick="checkAnswerEPP(4,'A')">a) Nagdidilig ng tubig</button>
+    <button onclick="checkAnswerEPP(4,'B')">b) Naglalagay ng bato</button>
+    <button onclick="checkAnswerEPP(4,'C')">c) Pinapabayaan lang</button>
+    <button onclick="checkAnswerEPP(4,'D')">d) Naglagay ng buhangin</button>
+    <p class="feedback" id="feedbackEPP4"></p>
+
+    <h3>5. Paano nakatulong si Maria sa komunidad?</h3>
+    <button onclick="checkAnswerEPP(5,'A')">a) Nagbenta ng kanyang mga tanim</button>
+    <button onclick="checkAnswerEPP(5,'B')">b) Nagbahagi ng mga gulay sa pamilya at kapitbahay</button>
+    <button onclick="checkAnswerEPP(5,'C')">c) Umuwi at hindi na nag-alaga</button>
+    <button onclick="checkAnswerEPP(5,'D')">d) Natulog na lang</button>
+    <p class="feedback" id="feedbackEPP5"></p>
+
+    <button onclick="nextWeekEPP(2)">Next Week</button>
+  </div>
+
+  <!-- WEEK 2: Lettering Styles -->
+  <div class="week" id="week2">
+    <h2>Week 2: Ang Pagkatuto ni Lara sa Lettering</h2>
+    <p class="story">
+      Si Lara ay natututo ng iba't ibang lettering styles tulad ng calligraphy, bold lettering, brush lettering, at cursive writing. Gumamit siya ng marker, lapis, at papel upang pagpraktisan ang mga estilo.
+    </p>
+
+    <h3>1. Ano ang ibig sabihin ng "calligraphy"?</h3>
+    <button onclick="checkAnswerEPP(6,'A')">a) Estilo ng sulat na mabilis at hindi malinis</button>
+    <button onclick="checkAnswerEPP(6,'B')">b) Estilo ng sulat na malaki at makapal</button>
+    <button onclick="checkAnswerEPP(6,'C')">c) Sining ng sulat na may maluluhong kurba at makinis na linya</button>
+    <button onclick="checkAnswerEPP(6,'D')">d) Estilo ng sulat na maliit na titik lamang</button>
+    <p class="feedback" id="feedbackEPP6"></p>
+
+    <h3>2. Bakit ginagamit ang brush lettering?</h3>
+    <button onclick="checkAnswerEPP(7,'A')">a) Nagbibigay ng makapal na linya at detalyadong epekto</button>
+    <button onclick="checkAnswerEPP(7,'B')">b) Para mas mabilis magsulat</button>
+    <button onclick="checkAnswerEPP(7,'C')">c) Simpleng estilo, kaunting gamit</button>
+    <button onclick="checkAnswerEPP(7,'D')">d) Para lamang sa drawing</button>
+    <p class="feedback" id="feedbackEPP7"></p>
+
+    <h3>3. Ano ang pagkakaiba ng bold lettering?</h3>
+    <button onclick="checkAnswerEPP(8,'A')">a) Gumagamit ng makapal at malalaking titik</button>
+    <button onclick="checkAnswerEPP(8,'B')">b) Naka-italic na titik</button>
+    <button onclick="checkAnswerEPP(8,'C')">c) Maliliit na titik</button>
+    <button onclick="checkAnswerEPP(8,'D')">d) Hindi ginagamit sa art projects</button>
+    <p class="feedback" id="feedbackEPP8"></p>
+
+    <h3>4. Bakit mahalaga ang tamang estilo ng sulat?</h3>
+    <button onclick="checkAnswerEPP(9,'A')">a) Nagpapakita ng personalidad at layunin ng proyekto</button>
+    <button onclick="checkAnswerEPP(9,'B')">b) Pareho lang ang lahat ng estilo</button>
+    <button onclick="checkAnswerEPP(9,'C')">c) Hindi mahalaga sa proyekto</button>
+    <button onclick="checkAnswerEPP(9,'D')">d) Para mas mabilis ang resulta</button>
+    <p class="feedback" id="feedbackEPP9"></p>
+
+    <h3>5. Ano ang epekto ng iba't ibang estilo sa sining?</h3>
+    <button onclick="checkAnswerEPP(10,'A')">a) Mas boring ang artwork</button>
+    <button onclick="checkAnswerEPP(10,'B')">b) Mas maganda, malikhain at propesyonal</button>
+    <button onclick="checkAnswerEPP(10,'C')">c) Mahirap basahin</button>
+    <button onclick="checkAnswerEPP(10,'D')">d) Walang epekto</button>
+    <p class="feedback" id="feedbackEPP10"></p>
+
+    <button onclick="nextWeekEPP(3)">Next Week</button>
+  </div>
+
+  <!-- WEEK 3: Alphabet Lines and Orthographic Views -->
+  <div class="week" id="week3">
+    <h2>Week 3: Alphabet Lines at Orthographic Views</h2>
+    <p class="story">
+      Si Arch Juan ay nagdisenyo ng gusali gamit ang alphabet lines at orthographic views upang makita ang buong detalye at matiyak ang kaligtasan.
+    </p>
+
+    <h3>1. Bakit kailangan ang alphabet lines?</h3>
+    <button onclick="checkAnswerEPP(11,'A')">A. Para sa kaligtasan</button>
+    <button onclick="checkAnswerEPP(11,'B')">B. Para sa malinaw na disenyo</button>
+    <button onclick="checkAnswerEPP(11,'C')">C. Para sa mabilis na pagdisenyo</button>
+    <button onclick="checkAnswerEPP(11,'D')">D. Para sa madaling pagbabasa</button>
+    <p class="feedback" id="feedbackEPP11"></p>
+
+    <h3>2. Anong dahilan ng paggamit ng orthographic views?</h3>
+    <button onclick="checkAnswerEPP(12,'A')">A. Para sa kaligtasan</button>
+    <button onclick="checkAnswerEPP(12,'B')">B. Para sa malinaw na disenyo</button>
+    <button onclick="checkAnswerEPP(12,'C')">C. Para sa mabilis na pagdisenyo</button>
+    <button onclick="checkAnswerEPP(12,'D')">D. Para sa madaling pagbabasa</button>
+    <p class="feedback" id="feedbackEPP12"></p>
+
+    <h3>3. Ano ang epekto ng malinaw na disenyo?</h3>
+    <button onclick="checkAnswerEPP(13,'A')">A. Kaligtasan ng gusali</button>
+    <button onclick="checkAnswerEPP(13,'B')">B. Mas malawak na pananaw</button>
+    <button onclick="checkAnswerEPP(13,'C')">C. Mas madaling pagbabasa</button>
+    <button onclick="checkAnswerEPP(13,'D')">D. Mas mabilis na pagdisenyo</button>
+    <p class="feedback" id="feedbackEPP13"></p>
+
+    <h3>4. Bakit kailangan i-review ang mga plano?</h3>
+    <button onclick="checkAnswerEPP(14,'A')">A. Para sa kaligtasan</button>
+    <button onclick="checkAnswerEPP(14,'B')">B. Para sa malinaw na disenyo</button>
+    <button onclick="checkAnswerEPP(14,'C')">C. Para sa mabilis na pagdisenyo</button>
+    <button onclick="checkAnswerEPP(14,'D')">D. Para sa madaling pagbabasa</button>
+    <p class="feedback" id="feedbackEPP14"></p>
+
+    <h3>5. Ano ang kahalagahan ng software sa pagdisenyo?</h3>
+    <button onclick="checkAnswerEPP(15,'A')">A. Para sa kaligtasan</button>
+    <button onclick="checkAnswerEPP(15,'B')">B. Para sa malinaw na disenyo</button>
+    <button onclick="checkAnswerEPP(15,'C')">C. Para sa mabilis na pagdisenyo</button>
+    <button onclick="checkAnswerEPP(15,'D')">D. Para sa madaling pagbabasa</button>
+    <p class="feedback" id="feedbackEPP15"></p>
+
+    <div class="score" id="scoreEPP" style="display:none;"></div>
+    <button onclick="calculateScoreEPP()">Tingnan ang Score</button>
+  </div>
+
+</div>
+
+<script>
+function startGame(){
+  document.getElementById('startScreen').style.display='none';
+  document.getElementById('gameContent').style.display='block';
+  showWeekEPP(1);
+}
+
+function nextWeekEPP(week){ showWeekEPP(week); }
+function showWeekEPP(week){
+  const weeks = document.querySelectorAll('.week');
+  weeks.forEach(w=>w.style.display='none');
+  document.getElementById('week'+week).style.display='block';
+}
+
+// Correct answers
+const answersEPP = {
+  1:'B',2:'A',3:'B',4:'A',5:'B',
+  6:'C',7:'A',8:'A',9:'A',10:'B',
+  11:'B',12:'B',13:'A',14:'A',15:'B'
+};
+
+// Filipino voice-over
+function speak(text){
+  if('speechSynthesis' in window){
+    const msg = new SpeechSynthesisUtterance();
+    msg.text = text;
+    msg.lang = 'fil-PH';
+    msg.rate = 1;
+    msg.pitch = 1;
+    window.speechSynthesis.speak(msg);
+  }
+}
+
+function checkAnswerEPP(qNum, choice){
+  const fb=document.getElementById('feedbackEPP'+qNum);
+  if(choice===answersEPP[qNum]){
+    fb.textContent='Tama';
+    fb.style.color='green';
+    speak('Tama');
+  } else {
+    fb.textContent='Subukan muli';
+    fb.style.color='red';
+    speak('Subukan muli');
+  }
+}
+
+function calculateScoreEPP(){
+  let score=0;
+  for(let i=1;i<=15;i++){
+    const fb=document.getElementById('feedbackEPP'+i).textContent;
+    if(fb==='Tama') score++;
+  }
+  const scoreText = `Naka-score ka ng ${score} sa 15!`;
+  document.getElementById('scoreEPP').textContent=scoreText;
+  document.getElementById('scoreEPP').style.display='block';
+  speak(scoreText);
+}
+</script>
+
+</body>
+</html>
